@@ -1,1 +1,1 @@
-console.writeline("Hello world")12345
+console.writeline("Hello world")
