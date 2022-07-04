@@ -1,1 +1,1 @@
-console.writeline("Hello world")
+console.writeline("Hello world from folder1")
