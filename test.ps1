@@ -1,2 +1,2 @@
 console.writeline("Hello world")
-Console.writeline("Hello From new branch")
+Console.writeline("Hello From conflict branch")
