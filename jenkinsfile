@@ -1,0 +1,81 @@
+#!/usr/bin/env groovy
+//Author: Dheenadhayalan M
+pipeline {
+    agent none
+    options {
+        buildDiscarder(logRotator(daysToKeepStr: '18'))
+    }
+    stages
+    {
+        stage('Export APIs From Dev API Manager') 
+        {
+            agent { label 'master' }
+            options {
+               timeout(time: 15, unit: 'MINUTES')
+               timestamps()
+            }
+            steps {
+                 cleanWs()
+                 ExportAPI("new-env")
+                 CopyFiles2Share()
+            }
+            // post {
+            //     always {
+            //         stash(name: "API", includes: '**/*.zip')
+            //     }
+            // }
+        }
+        // stage('Update and Import APIs')
+        // {
+        //      parallel
+        //     {
+                // stage('Import APIs to ST API Manager') 
+                // {   
+                //     environment {
+                //         APIURL = 'qa.smcty.honeywell.com'
+                //         JENKINSWORKSPACE = "${WORKSPACE}"
+                //         BUILDNUMBER = "${BuildNumber}"
+                //         APIENV = "QA-env1"
+                //     }
+                //     agent { label 'testapimanager' }
+                //     options {
+                //     timeout(time: 15, unit: 'MINUTES')
+                //     timestamps()
+                //     }
+                //     steps {
+                //         cleanWs()
+                //         unstash("API")
+                //         UpdateAPIs()
+                //         ImportAPIs()
+                //         UpdateCorsSettings()
+                //     }
+                // }
+                // stage('Import APIs to CS API Manager') 
+                // {
+                //     environment {
+                //         APIURL = 'cs.smcty.honeywell.com'
+                //         JENKINSWORKSPACE = "${WORKSPACE}"
+                //         BUILDNUMBER = "${BuildNumber}"
+                //         APIENV = "QA-env1"
+                //     }
+                //     agent { label 'csapimanager' }
+                //     options {
+                //     timeout(time: 15, unit: 'MINUTES')
+                //     timestamps()
+                //     }
+                //     steps {
+                //         cleanWs()
+                //         unstash("API")
+                //         UpdateAPIs()
+                //         ImportAPIs()
+                //         UpdateCorsSettings()
+                //     }
+                // }
+            //  }
+        // }        
+    }
+}
+
+def RunBatch(String command) {
+    bat returnStatus: false, script:"${command}"
+}
