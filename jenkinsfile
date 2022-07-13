@@ -80,5 +80,5 @@ def RunBatch(String command) {
 }
 
 def RunPython() {
-    RunBatch "python .\\helloworld\\hello_world.py"
+    RunBatch("python .\\helloworld\\hello_world.py")
 }
