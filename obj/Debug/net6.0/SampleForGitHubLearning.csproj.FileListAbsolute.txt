@@ -1,0 +1,15 @@
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\SampleForGitHubLearning.exe
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\SampleForGitHubLearning.deps.json
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\SampleForGitHubLearning.runtimeconfig.json
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\SampleForGitHubLearning.dll
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\ref\SampleForGitHubLearning.dll
+C:\Source\Demo\SampleForGitHubLearning\bin\Debug\net6.0\SampleForGitHubLearning.pdb
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.csproj.AssemblyReference.cache
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.AssemblyInfoInputs.cache
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.AssemblyInfo.cs
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.csproj.CoreCompileInputs.cache
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.dll
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\ref\SampleForGitHubLearning.dll
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.pdb
+C:\Source\Demo\SampleForGitHubLearning\obj\Debug\net6.0\SampleForGitHubLearning.genruntimeconfig.cache
