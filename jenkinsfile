@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-//Author: Dheenadhayalan M
+//Author: Dheenadhayalan M 
 pipeline {
     agent none
     options {
@@ -7,17 +7,16 @@ pipeline {
     }
     stages
     {
-        stage('Export APIs From Dev API Manager') 
+        stage('checkout code') 
         {
-            agent { label 'master' }
+            agent { label 'agent1' }
             options {
                timeout(time: 15, unit: 'MINUTES')
                timestamps()
             }
             steps {
-                 cleanWs()
-                 ExportAPI("new-env")
-                 CopyFiles2Share()
+                 checkout scm
+                 RunPython
             }
             // post {
             //     always {
@@ -78,4 +77,8 @@ pipeline {
 
 def RunBatch(String command) {
     bat returnStatus: false, script:"${command}"
+}
+
+def RunPython() {
+    RunBatch "python .\helloworld\hello_world.py"
 }
